@@ -17,6 +17,315 @@
     <title>InterChain Staking Derivatives (ICSD)</title>
     <script defer="defer" src="/static/js/main.a1921428.js"></script>
     <link href="/static/css/main.0128dc0c.css" rel="stylesheet">
+    <style>
+        #conference-timeline {
+          position: relative;
+          max-width: 920px;
+          width: 100%;
+          margin: 0 auto;
+          margin-top: 20vh;
+        }
+    
+        #conference-timeline .timeline-start,
+        #conference-timeline .timeline-end {
+          display: table;
+          font-family: "Roboto", sans-serif;
+          font-size: 18px;
+          font-weight: 300;
+          text-transform: uppercase;
+          background: rgba(255, 253, 253, 0.523);
+    
+          padding: 15px 23px;
+          color: #fff;
+          max-width: 5%;
+          width: 100%;
+          text-align: center;
+          margin: 0 auto;
+        }
+    
+        #conference-timeline .conference-center-line {
+          position: absolute;
+          width: 3px;
+          height: 100%;
+          top: 0;
+          left: 50%;
+          margin-left: 15px;
+          background: rgb(255, 0, 30);
+          background: linear-gradient(180deg, #d4145a 0%, #0ba1e2 100%);
+          z-index: 1;
+        }
+    
+        #conference-timeline .conference-timeline-content {
+          padding-top: 67px;
+          padding-bottom: 67px;
+        }
+    
+        .timeline-article {
+          width: 100%;
+          height: 200px;
+          position: relative;
+          overflow: hidden;
+          margin: 20px 0;
+          padding: 20px;
+    
+        }
+    
+        .twitwi {
+          display: none;
+        }
+    
+        .timeline-article .content-left-container,
+        .timeline-article .content-right-container {
+          max-width: 44%;
+          width: 100%;
+        }
+    
+        .timeline-article .timeline-author {
+          display: block;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 24px;
+          color: #242424;
+          text-align: right;
+        }
+    
+        .timeline-article .content-left,
+        .timeline-article .content-right {
+          position: relative;
+          width: auto;
+          transition: all ease-in-out .4s;
+          background: linear-gradient(96deg, #ed033d, #0ba1e2);
+          background-size: 400% 400%;
+    
+          -webkit-animation: AnimationName 7s ease infinite;
+          -moz-animation: AnimationName 7s ease infinite;
+          animation: AnimationName 7s ease infinite;
+          box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.75);
+          -webkit-box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.75);
+          padding: 25px;
+        }
+    
+        @-webkit-keyframes AnimationName {
+          0% {
+            background-position: 0% 99%
+          }
+    
+          50% {
+            background-position: 100% 2%
+          }
+    
+          100% {
+            background-position: 0% 99%
+          }
+        }
+    
+        @-moz-keyframes AnimationName {
+          0% {
+            background-position: 0% 99%
+          }
+    
+          50% {
+            background-position: 100% 2%
+          }
+    
+          100% {
+            background-position: 0% 99%
+          }
+        }
+    
+        @keyframes AnimationName {
+          0% {
+            background-position: 0% 99%
+          }
+    
+          50% {
+            background-position: 100% 2%
+          }
+    
+          100% {
+            background-position: 0% 99%
+          }
+        }
+    
+        .timeline-article:hover .content-left:hover,
+        .timeline-article:hover .content-right:hover {
+          transform: scale(1.04);
+          box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+          -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+          -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+          border-radius: 10px;
+        }
+    
+        .timeline-article p {
+          margin: 0 0 0 60px;
+          padding: 0;
+          font-weight: 200;
+          color: #ffffff;
+          font-size: 19px;
+          line-height: 24px;
+          position: relative;
+        }
+    
+        .timeline-article p span.article-number {
+          position: absolute;
+          font-weight: 300;
+          font-size: 44px;
+          top: 10px;
+          left: -60px;
+          color: #00b0bd;
+        }
+    
+        .timeline-article .content-left-container {
+          float: left;
+        }
+    
+        .timeline-article .content-right-container {
+          float: right;
+        }
+    
+        .timeline-article .content-left:before,
+        .timeline-article .content-right:before {
+          position: absolute;
+          top: 20px;
+          font-size: 23px;
+          font-family: "FontAwesome";
+          color: #5e4b4b00;
+        }
+    
+        .timeline-article .content-left:before {
+          content: "\f0da";
+          right: -8px;
+        }
+    
+        .timeline-article .content-right:before {
+          content: "\f0d9";
+          left: -8px;
+        }
+    
+        .timeline-article .meta-date {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          width: 62px;
+          height: 62px;
+          margin-left: -31px;
+          color: #fff;
+          border-radius: 100%;
+          background: rgba(27, 0, 54, 0.556);
+    
+        }
+    
+        .timeline-article .meta-date .date,
+        .timeline-article .meta-date .month {
+          display: block;
+          text-align: center;
+          font-weight: 300;
+        }
+    
+        .timeline-article .meta-date .date {
+          font-size: 30px;
+          line-height: 40px;
+        }
+    
+        .timeline-article .meta-date .month {
+          font-size: 18px;
+          line-height: 10px;
+        }
+    
+        /*===== // Vertical Timeline =====*/
+    
+        /*===== Resonsive Vertical Timeline =====*/
+        @media only screen and (max-width: 830px) {
+    
+          #conference-timeline .timeline-start,
+          #conference-timeline .timeline-end {
+            margin: 0;
+          }
+    
+          #conference-timeline .conference-center-line {
+            margin-left: 0;
+            left: -0px;
+          }
+    
+          .timeline-article .meta-date {
+            margin-left: 0;
+            left: 20px;
+          }
+    
+          .timeline-article .content-left-container,
+          .timeline-article .content-right-container {
+            max-width: 100%;
+            width: auto;
+            float: none;
+            margin-left: 110px;
+            min-height: 53px;
+          }
+    
+          .timeline-article .content-left-container {
+            margin-bottom: 20px;
+          }
+    
+          .timeline-article .content-left,
+          .timeline-article .content-right {
+            padding: 10px 25px;
+            min-height: 65px;
+          }
+    
+          .timeline-article .content-left:before {
+            content: "\f0d9";
+            right: auto;
+            left: -8px;
+          }
+    
+          .timeline-article .content-right:before {
+            display: none;
+          }
+    
+          .abuju {
+            max-width: 150px;
+            margin-top: -3em;
+    
+    
+          }
+    
+          .twatwaz {
+            display: none;
+          }
+    
+          .twitwi {
+            display: block;
+          }
+        }
+    
+        @media only screen and (max-width: 400px) {
+          .timeline-article p {
+            margin: 0;
+          }
+    
+          .timeline-article p span.article-number {
+            display: none;
+          }
+          .timeline-article {
+            margin-left: -32vw;
+          }
+    
+        }
+
+        .bagaga {
+              /* The image used */
+            background-image: url("./background-pattern-black.jpg");
+
+            /* Full height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+      </style>
+                  
     <style id="_goober">
         @keyframes go2264125279 {
             from {
@@ -154,7 +463,7 @@
             </header>
             <article class="hero">
                 <section class="hero__section"><img src="img/hero-img.png" class="hero__img" alt="hero_img">
-                    <h1 class="hero__title">InterChain Staking Derivatives (ICSD),<span>Unlocking Liquidity and Passive Income</span></h1>
+                    <h1 class="hero__title">InterChain Staking Derivatives (ICSD),<span >Unlocking Liquidity and Passive Income</span></h1>
                     <p class="hero__about">ICSD is a novel cryptocurrency-based financial product that allows users to stake their assets across multiple blockchain networks while keeping them liquid.</p>
                     <footer class="hero__footer"><a href="#/dapp/stake-eth">TELEGRAM</a><a
                             href="https://liquid-staking-derivatives.gitbook.io/whitepaper" target="_blank"></a>
@@ -184,47 +493,9 @@
                                             </clipPath>
                                         </defs>
                                     </svg>Twitter</a></li>
-                            <li class="social-media__item"><a href="https://discord.com/invite/lsderivatives/"
-                                    target="_blank"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_93_156)">
-                                            <path
-                                                d="M30.4756 6.55467C28.1811 5.50189 25.7206 4.7262 23.1479 4.28189C23.1011 4.27332 23.0543 4.29476 23.0301 4.33758C22.7137 4.90043 22.3632 5.63464 22.1177 6.21176C19.3507 5.79748 16.5978 5.79748 13.8875 6.21176C13.642 5.62184 13.2788 4.90043 12.9609 4.33758C12.9368 4.29617 12.89 4.27472 12.8431 4.28189C10.2719 4.72472 7.81142 5.50041 5.51544 6.55467C5.49554 6.56325 5.47852 6.57753 5.4672 6.59609C0.800139 13.5686 -0.478424 20.3698 0.148764 27.0866C0.151576 27.1195 0.170069 27.1509 0.195592 27.1709C3.27479 29.4323 6.25758 30.805 9.1849 31.715C9.23173 31.7293 9.28137 31.7122 9.31119 31.6736C10.0036 30.728 10.6209 29.7309 11.1501 28.6823C11.1814 28.6209 11.1515 28.548 11.0877 28.5237C10.1086 28.1524 9.17633 27.6995 8.27949 27.1853C8.20855 27.1439 8.20285 27.0424 8.26817 26.9938C8.45689 26.8524 8.64568 26.7053 8.82589 26.5567C8.85851 26.5295 8.90394 26.5238 8.94226 26.5409C14.8339 29.2309 21.2123 29.2309 27.0344 26.5409C27.0727 26.5224 27.1181 26.5281 27.1521 26.5552C27.3324 26.7038 27.5211 26.8523 27.7113 26.9937C27.7765 27.0423 27.7722 27.1438 27.7014 27.1852C26.8045 27.7095 25.8722 28.1523 24.8917 28.5223C24.8279 28.5465 24.7995 28.6208 24.8308 28.6822C25.3714 29.7293 25.9887 30.7264 26.6683 31.6721C26.6967 31.7121 26.7478 31.7293 26.7946 31.7149C29.7361 30.805 32.7189 29.4322 35.7981 27.1709C35.8251 27.1509 35.8421 27.1209 35.8449 27.088C36.5956 19.3227 34.5877 12.5772 30.5223 6.5975C30.5124 6.57753 30.4954 6.56325 30.4756 6.55467ZM12.0301 22.9968C10.2563 22.9968 8.79474 21.3683 8.79474 19.3684C8.79474 17.3685 10.2279 15.7399 12.0301 15.7399C13.8463 15.7399 15.2938 17.3827 15.2654 19.3684C15.2654 21.3683 13.8321 22.9968 12.0301 22.9968ZM23.9922 22.9968C22.2185 22.9968 20.7569 21.3683 20.7569 19.3684C20.7569 17.3685 22.19 15.7399 23.9922 15.7399C25.8085 15.7399 27.2558 17.3827 27.2275 19.3684C27.2275 21.3683 25.8085 22.9968 23.9922 22.9968Z"
-                                                fill="#AEAEAE"></path>
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_93_156">
-                                                <rect width="36" height="36" fill="white"></rect>
-                                            </clipPath>
-                                        </defs>
-                                    </svg>Discord</a></li>
-                            <li class="social-media__item"><a href="https://lsderivatives.medium.com/"
-                                    target="_blank"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M20.306 18C20.306 23.6458 15.7603 28.2227 10.153 28.2227C4.54563 28.2227 0 23.6458 0 18C0 12.3542 4.54563 7.77734 10.153 7.77734C15.7603 7.77734 20.306 12.3542 20.306 18Z"
-                                            fill="#AFAFAF"></path>
-                                        <path
-                                            d="M31.444 18C31.444 23.3146 29.1711 27.6229 26.3675 27.6229C23.5639 27.6229 21.291 23.3146 21.291 18C21.291 12.6855 23.5639 8.3772 26.3675 8.3772C29.1712 8.3772 31.444 12.6855 31.444 18Z"
-                                            fill="#AFAFAF"></path>
-                                        <path
-                                            d="M36 18.0001C36 22.7617 35.2006 26.6217 34.2146 26.6217C33.2284 26.6217 32.4292 22.7617 32.4292 18.0001C32.4292 13.2384 33.2284 9.37842 34.2146 9.37842C35.2006 9.37842 36 13.2384 36 18.0001Z"
-                                            fill="#AFAFAF"></path>
-                                    </svg>Medium</a></li>
+                        
                             <li class="social-media__item"><a href="https://github.com/lsderivatives/"
-                                    target="_blank"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_93_174)">
-                                            <path
-                                                d="M18 0.75C8.055 0.75 0 8.67 0 18.438C0 26.2545 5.157 32.883 12.3075 35.22C13.2075 35.3865 13.5375 34.839 13.5375 34.3695C13.5375 33.9495 13.5225 32.8365 13.515 31.362C8.508 32.4285 7.452 28.989 7.452 28.989C6.633 26.9475 5.4495 26.4015 5.4495 26.4015C3.819 25.305 5.5755 25.3275 5.5755 25.3275C7.383 25.4505 8.3325 27.15 8.3325 27.15C9.9375 29.8545 12.546 29.073 13.575 28.6215C13.737 27.477 14.2005 26.6985 14.715 26.256C10.7175 25.8135 6.516 24.2925 6.516 17.5155C6.516 15.585 7.2135 14.007 8.3685 12.7695C8.166 12.3225 7.5585 10.524 8.526 8.088C8.526 8.088 10.0335 7.614 13.476 9.9015C14.916 9.5085 16.446 9.3135 17.976 9.3045C19.506 9.3135 21.036 9.5085 22.476 9.9015C25.896 7.614 27.4035 8.088 27.4035 8.088C28.371 10.524 27.7635 12.3225 27.5835 12.7695C28.731 14.007 29.4285 15.585 29.4285 17.5155C29.4285 24.3105 25.221 25.806 21.216 26.241C21.846 26.772 22.431 27.8565 22.431 29.514C22.431 31.881 22.4085 33.783 22.4085 34.3575C22.4085 34.821 22.7235 35.3745 23.646 35.1975C30.8475 32.8755 36 26.2425 36 18.438C36 8.67 27.9405 0.75 18 0.75Z"
-                                                fill="#AFAFAF"></path>
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_93_174">
-                                                <rect width="36" height="36" fill="white"></rect>
-                                            </clipPath>
-                                        </defs>
-                                    </svg>Github</a></li>
+                                    target="_blank"><img style="height: auto; width: 50px; padding: 7px 25px; margin-top: -16px; margin-bottom: 14px;" src="./telegram (1).png" alt="">Telegram</a></li>
                             <li class="social-media__item"><a
                                     href="https://coinmarketcap.com/currencies/liquid-staking-derivatives/"
                                     target="_blank"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"
@@ -345,315 +616,7 @@
                     </div>
                 </section>
 
-                <style>
-                    #conference-timeline {
-                      position: relative;
-                      max-width: 920px;
-                      width: 100%;
-                      margin: 0 auto;
-                      margin-top: 20vh;
-                    }
-                
-                    #conference-timeline .timeline-start,
-                    #conference-timeline .timeline-end {
-                      display: table;
-                      font-family: "Roboto", sans-serif;
-                      font-size: 18px;
-                      font-weight: 300;
-                      text-transform: uppercase;
-                      background: rgba(255, 253, 253, 0.523);
-                
-                      padding: 15px 23px;
-                      color: #fff;
-                      max-width: 5%;
-                      width: 100%;
-                      text-align: center;
-                      margin: 0 auto;
-                    }
-                
-                    #conference-timeline .conference-center-line {
-                      position: absolute;
-                      width: 3px;
-                      height: 100%;
-                      top: 0;
-                      left: 50%;
-                      margin-left: 15px;
-                      background: rgb(255, 0, 30);
-                      background: linear-gradient(180deg, #d4145a 0%, #0ba1e2 100%);
-                      z-index: 1;
-                    }
-                
-                    #conference-timeline .conference-timeline-content {
-                      padding-top: 67px;
-                      padding-bottom: 67px;
-                    }
-                
-                    .timeline-article {
-                      width: 100%;
-                      height: 200px;
-                      position: relative;
-                      overflow: hidden;
-                      margin: 20px 0;
-                      padding: 20px;
-                
-                    }
-                
-                    .twitwi {
-                      display: none;
-                    }
-                
-                    .timeline-article .content-left-container,
-                    .timeline-article .content-right-container {
-                      max-width: 44%;
-                      width: 100%;
-                    }
-                
-                    .timeline-article .timeline-author {
-                      display: block;
-                      font-weight: 400;
-                      font-size: 14px;
-                      line-height: 24px;
-                      color: #242424;
-                      text-align: right;
-                    }
-                
-                    .timeline-article .content-left,
-                    .timeline-article .content-right {
-                      position: relative;
-                      width: auto;
-                      transition: all ease-in-out .4s;
-                      background: linear-gradient(96deg, #ed033d, #0ba1e2);
-                      background-size: 400% 400%;
-                
-                      -webkit-animation: AnimationName 7s ease infinite;
-                      -moz-animation: AnimationName 7s ease infinite;
-                      animation: AnimationName 7s ease infinite;
-                      box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.75);
-                      -webkit-box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.75);
-                      -moz-box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.75);
-                      padding: 25px;
-                    }
-                
-                    @-webkit-keyframes AnimationName {
-                      0% {
-                        background-position: 0% 99%
-                      }
-                
-                      50% {
-                        background-position: 100% 2%
-                      }
-                
-                      100% {
-                        background-position: 0% 99%
-                      }
-                    }
-                
-                    @-moz-keyframes AnimationName {
-                      0% {
-                        background-position: 0% 99%
-                      }
-                
-                      50% {
-                        background-position: 100% 2%
-                      }
-                
-                      100% {
-                        background-position: 0% 99%
-                      }
-                    }
-                
-                    @keyframes AnimationName {
-                      0% {
-                        background-position: 0% 99%
-                      }
-                
-                      50% {
-                        background-position: 100% 2%
-                      }
-                
-                      100% {
-                        background-position: 0% 99%
-                      }
-                    }
-                
-                    .timeline-article:hover .content-left:hover,
-                    .timeline-article:hover .content-right:hover {
-                      transform: scale(1.04);
-                      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-                      -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-                      -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-                      border-radius: 10px;
-                    }
-                
-                    .timeline-article p {
-                      margin: 0 0 0 60px;
-                      padding: 0;
-                      font-weight: 200;
-                      color: #ffffff;
-                      font-size: 19px;
-                      line-height: 24px;
-                      position: relative;
-                    }
-                
-                    .timeline-article p span.article-number {
-                      position: absolute;
-                      font-weight: 300;
-                      font-size: 44px;
-                      top: 10px;
-                      left: -60px;
-                      color: #00b0bd;
-                    }
-                
-                    .timeline-article .content-left-container {
-                      float: left;
-                    }
-                
-                    .timeline-article .content-right-container {
-                      float: right;
-                    }
-                
-                    .timeline-article .content-left:before,
-                    .timeline-article .content-right:before {
-                      position: absolute;
-                      top: 20px;
-                      font-size: 23px;
-                      font-family: "FontAwesome";
-                      color: #5e4b4b00;
-                    }
-                
-                    .timeline-article .content-left:before {
-                      content: "\f0da";
-                      right: -8px;
-                    }
-                
-                    .timeline-article .content-right:before {
-                      content: "\f0d9";
-                      left: -8px;
-                    }
-                
-                    .timeline-article .meta-date {
-                      position: absolute;
-                      top: 0;
-                      left: 50%;
-                      width: 62px;
-                      height: 62px;
-                      margin-left: -31px;
-                      color: #fff;
-                      border-radius: 100%;
-                      background: rgba(27, 0, 54, 0.556);
-                
-                    }
-                
-                    .timeline-article .meta-date .date,
-                    .timeline-article .meta-date .month {
-                      display: block;
-                      text-align: center;
-                      font-weight: 300;
-                    }
-                
-                    .timeline-article .meta-date .date {
-                      font-size: 30px;
-                      line-height: 40px;
-                    }
-                
-                    .timeline-article .meta-date .month {
-                      font-size: 18px;
-                      line-height: 10px;
-                    }
-                
-                    /*===== // Vertical Timeline =====*/
-                
-                    /*===== Resonsive Vertical Timeline =====*/
-                    @media only screen and (max-width: 830px) {
-                
-                      #conference-timeline .timeline-start,
-                      #conference-timeline .timeline-end {
-                        margin: 0;
-                      }
-                
-                      #conference-timeline .conference-center-line {
-                        margin-left: 0;
-                        left: -0px;
-                      }
-                
-                      .timeline-article .meta-date {
-                        margin-left: 0;
-                        left: 20px;
-                      }
-                
-                      .timeline-article .content-left-container,
-                      .timeline-article .content-right-container {
-                        max-width: 100%;
-                        width: auto;
-                        float: none;
-                        margin-left: 110px;
-                        min-height: 53px;
-                      }
-                
-                      .timeline-article .content-left-container {
-                        margin-bottom: 20px;
-                      }
-                
-                      .timeline-article .content-left,
-                      .timeline-article .content-right {
-                        padding: 10px 25px;
-                        min-height: 65px;
-                      }
-                
-                      .timeline-article .content-left:before {
-                        content: "\f0d9";
-                        right: auto;
-                        left: -8px;
-                      }
-                
-                      .timeline-article .content-right:before {
-                        display: none;
-                      }
-                
-                      .abuju {
-                        max-width: 150px;
-                        margin-top: -3em;
-                
-                
-                      }
-                
-                      .twatwaz {
-                        display: none;
-                      }
-                
-                      .twitwi {
-                        display: block;
-                      }
-                    }
-                
-                    @media only screen and (max-width: 400px) {
-                      .timeline-article p {
-                        margin: 0;
-                      }
-                
-                      .timeline-article p span.article-number {
-                        display: none;
-                      }
-                      .timeline-article {
-                        margin-left: -32vw;
-                      }
-                
-                    }
-
-                    .bagaga {
-                          /* The image used */
-                        background-image: url("./background-pattern-black.jpg");
-
-                        /* Full height */
-                        height: 100%;
-
-                        /* Center and scale the image nicely */
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                    }
-                  </style>
-                                    
+       
                   <section class="bagaga"  style="text-align: center; height:70vh;">
                     <div style="height: 10vh;" >
 
