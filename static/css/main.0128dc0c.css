@@ -543,11 +543,11 @@ body {
 
 .hero__title {
     font-family: Passenger Sans Bold, sans-serif;
-    font-size: 80px;
+    font-size: 40px;
     margin-left: auto;
     margin-right: auto;
     margin-top: -37px;
-    max-width: 590px
+    max-width: 90vw;
 }
 
 .hero__title span {

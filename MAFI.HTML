@@ -1,0 +1,827 @@
+<!doctype html>
+<html class="no-js wf-loading is-en" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="theme-color" content="#0c0720">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,400italic,700,900' rel='stylesheet'
+    type='text/css'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"
+    type="text/css">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>PLSTV</title>
+  <meta name="description" content="PLSTV is a real-time, development focussed, creative studio on the blockchain.">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="PLSTV">
+  <meta property="og:description"
+    content="PLSTV is a real-time, development focussed, creative studio on the blockchain.">
+  <meta property="og:url" content="https://PLSTV.co/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PLSTV">
+  <meta property="og:image" content="https://PLSTV.co/assets/images/share.png">
+  <meta property="fb:app_id" content="127055547943065">
+  <meta name="twitter:site" content="@PLSTVltd">
+  <meta name="twitter:creator" content="@PLSTVltd">
+  <meta name="twitter:card" content="summary">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=no">
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
+  <base href="/">
+  <script>
+    var ua = (navigator.userAgent || navigator.vendor || window.opera).toLowerCase();
+    document.documentElement.className += /(iPad|iPhone|Android)/i.test(ua) ? ' is-mobile' : ' is-desktop';
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    var supportedLangs = ['en', 'cn'];
+    var lang = 'en';
+  </script>
+  <link rel="stylesheet" href="assets/css/index.css">
+  <style>
+    #conference-timeline {
+      position: relative;
+      max-width: 920px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    #conference-timeline .timeline-start,
+    #conference-timeline .timeline-end {
+      display: table;
+      font-family: "Roboto", sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      text-transform: uppercase;
+      background: rgba(0, 0, 0, 0.523);
+
+      padding: 15px 23px;
+      color: #fff;
+      max-width: 5%;
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    #conference-timeline .conference-center-line {
+      position: absolute;
+      width: 3px;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      margin-left: -2px;
+      background: rgb(255, 0, 30);
+      background: linear-gradient(180deg, rgba(255, 0, 30, 0.7910171186553766) 0%, rgba(0, 38, 255, 0.7403338888417119) 100%);
+      z-index: -1;
+    }
+
+    #conference-timeline .conference-timeline-content {
+      padding-top: 67px;
+      padding-bottom: 67px;
+    }
+
+    .timeline-article {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      margin: 20px 0;
+      padding: 20px;
+
+    }
+
+    .twitwi {
+      display: none;
+    }
+
+    .timeline-article .content-left-container,
+    .timeline-article .content-right-container {
+      max-width: 44%;
+      width: 100%;
+    }
+
+    .timeline-article .timeline-author {
+      display: block;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      color: #242424;
+      text-align: right;
+    }
+
+    .timeline-article .content-left,
+    .timeline-article .content-right {
+      position: relative;
+      width: auto;
+      transition: all ease-in-out .4s;
+      background: linear-gradient(96deg, #ed033d, #320276);
+      background-size: 400% 400%;
+
+      -webkit-animation: AnimationName 7s ease infinite;
+      -moz-animation: AnimationName 7s ease infinite;
+      animation: AnimationName 7s ease infinite;
+      box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.75);
+      padding: 25px;
+    }
+
+    @-webkit-keyframes AnimationName {
+      0% {
+        background-position: 0% 99%
+      }
+
+      50% {
+        background-position: 100% 2%
+      }
+
+      100% {
+        background-position: 0% 99%
+      }
+    }
+
+    @-moz-keyframes AnimationName {
+      0% {
+        background-position: 0% 99%
+      }
+
+      50% {
+        background-position: 100% 2%
+      }
+
+      100% {
+        background-position: 0% 99%
+      }
+    }
+
+    @keyframes AnimationName {
+      0% {
+        background-position: 0% 99%
+      }
+
+      50% {
+        background-position: 100% 2%
+      }
+
+      100% {
+        background-position: 0% 99%
+      }
+    }
+
+    .timeline-article:hover .content-left:hover,
+    .timeline-article:hover .content-right:hover {
+      transform: scale(1.04);
+      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+      -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+      -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+      border-radius: 10px;
+    }
+
+    .timeline-article p {
+      margin: 0 0 0 60px;
+      padding: 0;
+      font-weight: 200;
+      color: #ffffff;
+      font-size: 19px;
+      line-height: 24px;
+      position: relative;
+    }
+
+    .timeline-article p span.article-number {
+      position: absolute;
+      font-weight: 300;
+      font-size: 44px;
+      top: 10px;
+      left: -60px;
+      color: #00b0bd;
+    }
+
+    .timeline-article .content-left-container {
+      float: left;
+    }
+
+    .timeline-article .content-right-container {
+      float: right;
+    }
+
+    .timeline-article .content-left:before,
+    .timeline-article .content-right:before {
+      position: absolute;
+      top: 20px;
+      font-size: 23px;
+      font-family: "FontAwesome";
+      color: #fff;
+    }
+
+    .timeline-article .content-left:before {
+      content: "\f0da";
+      right: -8px;
+    }
+
+    .timeline-article .content-right:before {
+      content: "\f0d9";
+      left: -8px;
+    }
+
+    .timeline-article .meta-date {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 62px;
+      height: 62px;
+      margin-left: -31px;
+      color: #fff;
+      border-radius: 100%;
+      background: rgba(27, 0, 54, 0.556);
+
+    }
+
+    .timeline-article .meta-date .date,
+    .timeline-article .meta-date .month {
+      display: block;
+      text-align: center;
+      font-weight: 300;
+    }
+
+    .timeline-article .meta-date .date {
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+    .timeline-article .meta-date .month {
+      font-size: 18px;
+      line-height: 10px;
+    }
+
+    /*===== // Vertical Timeline =====*/
+
+    /*===== Resonsive Vertical Timeline =====*/
+    @media only screen and (max-width: 830px) {
+
+      #conference-timeline .timeline-start,
+      #conference-timeline .timeline-end {
+        margin: 0;
+      }
+
+      #conference-timeline .conference-center-line {
+        margin-left: 0;
+        left: 50px;
+      }
+
+      .timeline-article .meta-date {
+        margin-left: 0;
+        left: 20px;
+      }
+
+      .timeline-article .content-left-container,
+      .timeline-article .content-right-container {
+        max-width: 100%;
+        width: auto;
+        float: none;
+        margin-left: 110px;
+        min-height: 53px;
+      }
+
+      .timeline-article .content-left-container {
+        margin-bottom: 20px;
+      }
+
+      .timeline-article .content-left,
+      .timeline-article .content-right {
+        padding: 10px 25px;
+        min-height: 65px;
+      }
+
+      .timeline-article .content-left:before {
+        content: "\f0d9";
+        right: auto;
+        left: -8px;
+      }
+
+      .timeline-article .content-right:before {
+        display: none;
+      }
+
+      .abuju {
+        max-width: 150px;
+        margin-top: -3em;
+
+
+      }
+
+      .twatwaz {
+        display: none;
+      }
+
+      .twitwi {
+        display: block;
+      }
+    }
+
+    @media only screen and (max-width: 400px) {
+      .timeline-article p {
+        margin: 0;
+      }
+
+      .timeline-article p span.article-number {
+        display: none;
+      }
+
+    }
+  </style>
+</head>
+
+<body> <canvas id="canvas"></canvas>
+  <div id="app">
+    <div id="main" data-scroll-tooltip="Scroll to begin">
+      <div id="main-scroll">
+        <div id="page-container">
+          <main id="home" class="page is-home" data-id="home" data-page-id="home" data-url="" data-title="lusion">
+            <section id="home-hero" class="hero is-full">
+              <div id="home-hero-context" class="hero-context flex-vertical">
+                <div class="hero-inner">
+                  <h1 id="home-hero-title" class="hero-title">PULSE TV</h1>
+                  <h4 id="home-hero-desc" class="hero-desc">Unleash the Pulse of Entertainment: Introducing Pulse TV -
+                    Stream with Power and Precision</h4>
+                </div>
+              </div>
+            </section>
+            <section id="home-about">
+              <div id="home-about-context" class="sec-context flex-vertical">
+                <div class="sec-context-inner is-right darker-bg">
+                  <h3 id="home-about-title" class="font-header-bold split-line-mask-effect">Streaming Redefined: Pulse
+                    TV - Unleash Entertainment's Pulse.</h3>
+                  <div id="home-about-desc" class="font-bold split-line-mask-effect">Welcome to Pulse TV, where
+                    entertainment reaches new heights. With our cutting-edge streaming platform, we redefine the way you
+                    experience your favorite content.</div>
+                  <a id="home-about-cta-wrapper" href="#about">
+                    <div id="home-about-cta" class="font-bold split-line-mask-effect">More About Us</div>
+                  </a>
+                </div>
+              </div>
+            </section>
+            <section id="home-video" class="is-full"></section>
+          </main>
+        </div>
+        <div id="featured">
+          <div id="featured-context" class="sec-context">
+            <div class="sec-context-inner">
+              <h3 id="featured-title" class="sec-title font-header">Crafted with<br>Dedication<br>and Love</h3>
+              <div id="featured-desc" class="sec-desc font-bold">We love what we do and combine our expert knowledge
+                with enthusiasm in web3 to go above and beyond for our clients. Check out some of our features:</div>
+              <br><br><br><br>
+              <h1 style="text-align: center; margin-bottom: -10vh;" id="about"> ABOUT US </h1>
+            </div>
+            <div id="featured-items-container">
+              <div id="featured-title" class="featured-item twatwa" data-id="coca-cola-the-soda-experience">
+                <a class="featured-item-link" href="/work/coca-cola-the-soda-experience">
+                  <div class="featured-item-image twatwa">
+
+                    <div
+                      style="line-height: 17px !important; font-size: 15px !important ; color: aliceblue !important;">
+
+                      Welcome to Pulse TV, where groundbreaking blockchain technology meets unparalleled streaming
+                      services. Our vision is to revolutionize the way you experience entertainment, delivering a
+                      seamless, high-quality streaming platform that empowers both content creators and viewers. With
+                      Pulse TV, get ready to immerse yourself in a world of captivating shows, movies, live events, and
+                      much more
+                    </div>
+                  </div>
+                  <div class="featured-item-context is-white-content" data-base-color="#00f">
+                    <div class="featured-item-desc font-header-bold split-line-mask-effect"></div><img class="abuju"
+                      style="max-height:500px; margin: 20px;" src="/screen.png" alt="sd">
+                    <div class="featured-item-client split-line-mask-effect"></div> <svg style="display: none;"
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8">
+                      <polygon
+                        points="6.767 0.603 6.767 5.897 0.871 0 0 0.872 5.894 6.767 0.605 6.767 0.605 8 8 8 8 0.603 6.767 0.603" />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="twatwaz">
+                <div class="featured-item " data-id="coca-cola-the-soda-experience">
+                  <a class="featured-item-link" href="/work/coca-cola-the-soda-experience">
+                    <div class="featured-item-image " style="margin-left: 37vw !important;">
+
+                      <div
+                        style="line-height: 17px !important; font-size: 15px !important ; color: aliceblue !important;">
+
+                        At Pulse TV, we believe in unlocking the true potential of streaming by leveraging the security,
+                        transparency, and decentralization of blockchain. Our platform ensures fair compensation for
+                        content creators, eliminating intermediaries and providing direct access to their global
+                        audience. Powered by advanced streaming algorithms and state-of-the-art infrastructure, we
+                        deliver uninterrupted, buffer-free streaming, allowing you to indulge in your favorite content
+                        with uninterrupted joy.
+                      </div>
+
+                    </div>
+                    <div style="left: 0 !important; margin-left: -5vw;" class="featured-item-context is-white-content"
+                      data-base-color="#00f">
+                      <div class="featured-item-desc font-header-bold split-line-mask-effect"></div><img class="abuju"
+                        style="max-height:500px;" src="/33.png" alt="sd">
+                      <div class="featured-item-client split-line-mask-effect"></div> <svg style="display: none;"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8">
+                        <polygon
+                          points="6.767 0.603 6.767 5.897 0.871 0 0 0.872 5.894 6.767 0.605 6.767 0.605 8 8 8 8 0.603 6.767 0.603" />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="featured-item" data-id="coca-cola-the-soda-experience">
+                <a class="featured-item-link" href="/work/coca-cola-the-soda-experience">
+                  <div class="featured-item-image twatwa">
+
+                    <div
+                      style="line-height: 17px !important; font-size: 15px !important ; color: aliceblue !important;">
+
+                      Discover a rich library of diverse content on Pulse TV, catering to every taste and interest. From
+                      blockbuster movies to original series, thought-provoking documentaries to live sports events,
+                      Pulse TV has it all. Join our vibrant community of entertainment enthusiasts, engage in
+                      interactive features, and explore personalized recommendations tailored to your preferences.
+                      Experience the pulse like never before with PulseTV.
+                    </div>
+
+                  </div>
+                  <div class="featured-item-context is-white-content" style="right: 200px !important;"
+                    data-base-color="#00f">
+                    <div class="featured-item-desc font-header-bold split-line-mask-effect"></div><img class="abuju"
+                      style="max-height:500px;" src="play.png" alt="sd">
+                    <div class="featured-item-client split-line-mask-effect"></div> <svg style="display: none;"
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8">
+                      <polygon
+                        points="6.767 0.603 6.767 5.897 0.871 0 0 0.872 5.894 6.767 0.605 6.767 0.605 8 8 8 8 0.603 6.767 0.603" />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="featured-item" style="width: 1080px !important;" data-id="coca-cola-the-soda-experience">
+                <a style="display: none;" class="featured-item-link" href="/work/coca-cola-the-soda-experience">
+                  <div class="featured-item-image" style="margin-left: 30vw !important;">
+
+                    <div style="line-height: 27px !important; font-size: 26px !important ;">
+
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga sequi quas amet, voluptas eum
+                      impedit fugiat ducimus odio temporibus quidem sit est facilis unde. Beatae cum, recusandae harum
+                      id corporis ut exercitationem voluptatum quam nulla quae rem earum labore doloremque ipsum officia
+                      sint praesentium fugiat eum sapiente rerum optio qui dolorum. Molestias enim voluptatibus
+                      nesciunt? Sequi voluptates facilis consequatur impedit totam optio nulla. Autem ipsum, harum nam
+                      sapiente earum ratione voluptas. Dicta natus eos cum aliquam fuga consequuntur modi incidunt quos?
+                      Quam at ducimus nisi inventore, suscipit deserunt ipsa enim magni possimus cumque incidunt hic
+                      assumenda laboriosam ab eaque cupiditate.
+                    </div>
+
+                  </div>
+                  <div style="left: 0 !important; margin-left: -5vw;" class="featured-item-context is-white-content"
+                    data-base-color="#00f">
+                    <div class="featured-item-desc font-header-bold split-line-mask-effect"></div><img class="abuju"
+                      style="max-height:500px;" src="/33.png" alt="sd">
+                    <div class="featured-item-client split-line-mask-effect"></div> <svg style="display: none;"
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8">
+                      <polygon
+                        points="6.767 0.603 6.767 5.897 0.871 0 0 0.872 5.894 6.767 0.605 6.767 0.605 8 8 8 8 0.603 6.767 0.603" />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+
+
+            </div>
+            <style>
+              .containerZ {
+                display: grid;
+                transition: all .5s ease-in-out;
+                min-height: 500px;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                gap: 10px 40px;
+                grid-auto-flow: row;
+                grid-template-areas:
+                  ". TOTALZ ."
+                  "DISTRO TAXES AOB"
+                ;
+                margin-bottom: 100PX;
+
+              }
+
+              .containerZ:hover {
+                border-radius: 8px;
+                box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.39);
+                -webkit-box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.39);
+                -moz-box-shadow: 0px 0px 3px 3 rgba(255, 255, 255, 0.39);
+                background: #24242486;
+              }
+
+              .TOTALZ {
+                grid-area: TOTALZ;
+                text-align: center;
+                line-height: 30px;
+              }
+
+              .DISTRO {
+                grid-area: DISTRO;
+                text-align: center;
+                line-height: 30px;
+              }
+
+              .TAXES {
+                grid-area: TAXES;
+                text-align: center;
+                line-height: 30px;
+              }
+
+              .AOB {
+                grid-area: AOB;
+                text-align: center;
+                line-height: 30px;
+              }
+
+              .containerx {
+                display: block;
+              }
+            </style>
+            <div class="sec-context-inner " data-base-color="#00f"><br><br><br><br><br><br>
+              <h1 style="text-align: center;">TOKENOMICS</h1><br><br><br>
+              <div class="twatwaz">
+                <div class="containerZ">
+                  <div class="TOTALZ"><br><br><br>
+                    TOTAL SUPPLY: 1,000,000,000,000 PLSTV <br> BUY TAX : 2% <br> SELL TAX : 2%
+                  </div>
+                  <div class="DISTRO">
+                    <h3>TOKEN DISTRIBUTION</h3> <br> LIQUIDITY : 90% <br> DAPP : 5% <br> TEAM : 1% <br> CEX : 4%
+                  </div>
+                  <div class="TAXES">
+                    <h3>TAX ALLOCATION</h3> <br> LIQUIDITY : 90% <br> DAPP : 5% <br> TEAM : 1% <br> CEX : 4%
+                  </div>
+                  <div class="AOB">
+                    <h3>FEATURES</h3> <br> VERIFIED CONNTRACT <br> LP LOCKED<br> BASED TEAM <br> MANCITY
+                  </div>
+                </div>
+              </div>
+
+              <div class="twitwi">
+                <div class="containerx">
+                  <div class="TOTALX"><br><br><br>
+                    TOTAL SUPPLY: 1,000,000,000,000 PLSTV <br> BUY TAX : 2% <br> SELL TAX : 2%
+                  </div>
+                  <div class="DISTROX">
+                    <h3>TOKEN DISTRIBUTION</h3> <br> LIQUIDITY : 90% <br> DAPP : 5% <br> TEAM : 1% <br> CEX : 4%
+                  </div>
+                  <div class="TAXEX">
+                    <h3>TAX ALLOCATION</h3> <br> LIQUIDITY : 90% <br> DAPP : 5% <br> TEAM : 1% <br> CEX : 4%
+                  </div>
+                  <div class="AOX">
+                    <h3>FEATURES</h3> <br> VERIFIED CONNTRACT <br> LP LOCKED<br> BASED TEAM <br> MANCITY
+                  </div>
+                </div>
+              </div>
+              <div class="featured-item" style="width: 1080px !important;" data-id="coca-cola-the-soda-experience">
+                <a style="display: none;" class="featured-item-link" href="/work/coca-cola-the-soda-experience">
+                  <div class="featured-item-image" style="margin-left: 30vw !important;">
+
+                    <div style="line-height: 27px !important; font-size: 26px !important ;">
+
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga sequi quas amet, voluptas eum
+                      impedit fugiat ducimus odio temporibus quidem sit est facilis unde. Beatae cum, recusandae harum
+                      id corporis ut exercitationem voluptatum quam nulla quae rem earum labore doloremque ipsum officia
+                      sint praesentium fugiat eum sapiente rerum optio qui dolorum. Molestias enim voluptatibus
+                      nesciunt? Sequi voluptates facilis consequatur impedit totam optio nulla. Autem ipsum, harum nam
+                      sapiente earum ratione voluptas. Dicta natus eos cum aliquam fuga consequuntur modi incidunt quos?
+                      Quam at ducimus nisi inventore, suscipit deserunt ipsa enim magni possimus cumque incidunt hic
+                      assumenda laboriosam ab eaque cupiditate.
+                    </div>
+
+                  </div>
+                  <div style="left: 0 !important; margin-left: -5vw;" class="featured-item-context is-white-content"
+                    data-base-color="#00f">
+                    <div class="featured-item-desc font-header-bold split-line-mask-effect"></div><img
+                      style="max-height:500px;" src="/33.png" alt="sd">
+                    <div class="featured-item-client split-line-mask-effect"></div> <svg style="display: none;"
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8">
+                      <polygon
+                        points="6.767 0.603 6.767 5.897 0.871 0 0 0.872 5.894 6.767 0.605 6.767 0.605 8 8 8 8 0.603 6.767 0.603" />
+                    </svg>
+                  </div>
+                </a>
+              </div><br><br><br><br>
+              <h1 style="text-align: center;"> ROADMAP </h1><br><br>
+              <section id="conference-timeline">
+                <div class="timeline-start">Start</div>
+                <div class="conference-center-line"></div>
+                <div class="conference-timeline-content">
+                  <!-- Article -->
+                  <div class="timeline-article">
+                    <div class="content-left-container">
+                      <div class="content-left">
+                        <p>When I orbited the Earth in a spaceship, I saw for the first time how beautiful our planet
+                          is. Mankind, let us preserve and increase this beauty, and not destroy it! <span
+                            class="article-number">01</span></p>
+                      </div>
+                      <span class="timeline-author"></span>
+                    </div>
+
+                    <div class="meta-date">
+                      <span class="date">18</span>
+                      <span class="month">APR</span>
+                    </div>
+                  </div>
+                  <!-- // Article -->
+
+                  <!-- Article -->
+                  <div class="timeline-article">
+
+                    <div class="content-right-container">
+                      <div class="content-right">
+                        <p>When I orbited the Earth in a spaceship, I saw for the first time how beautiful our planet
+                          is. <span class="article-number">02</span></p>
+                      </div>
+                      <span class="timeline-author"></span>
+                    </div>
+                    <div class="meta-date">
+                      <span class="date">20</span>
+                      <span class="month">MAR</span>
+                    </div>
+                  </div>
+                  <!-- // Article -->
+
+                  <!-- Article -->
+                  <div class="timeline-article">
+                    <div class="content-left-container">
+                      <div class="content-left">
+                        <p>When I orbited the Earth in a spaceship, I saw for the first time how beautiful our planet
+                          is. Mankind, let us preserve and increase this beauty, and not destroy it! <span
+                            class="article-number">03</span></p>
+                      </div>
+                      <span class="timeline-author"></span>
+                    </div>
+
+                    <div class="meta-date">
+                      <span class="date">28</span>
+                      <span class="month">JUN</span>
+                    </div>
+                  </div>
+                  <div class="timeline-article">
+
+                    <div class="content-right-container">
+                      <div class="content-right">
+                        <p>When I orbited the Earth in a spaceship, I saw for the first time how beautiful our planet
+                          is. <span class="article-number">04</span></p>
+                      </div>
+                      <span class="timeline-author"></span>
+                    </div>
+                    <div class="meta-date">
+                      <span class="date">12</span>
+                      <span class="month">JULY</span>
+                    </div>
+                  </div>
+                  <div class="timeline-article">
+                    <div class="content-left-container">
+                      <div class="content-left">
+                        <p>When I orbited the Earth in a spaceship, I saw for the first time how beautiful our planet
+                          is. Mankind, let us preserve and increase this beauty, and not destroy it! <span
+                            class="article-number">05</span></p>
+                      </div>
+                      <span class="timeline-author"></span>
+                    </div>
+
+                    <div class="meta-date">
+                      <span class="date">1</span>
+                      <span class="month">AUG</span>
+                    </div>
+                  </div>
+                  <!-- // Article -->
+                </div>
+                <div class="timeline-end">Moon</div>
+              </section>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+        <div id="contact">
+          <div id="contact-main">
+            <div id="contact-context" class="sec-context flex-vertical">
+              <div class="sec-context-inner darker-bg is-left">
+                <h4 id="contact-title" class="font-header-bold">Don’t blindly<br>follow the crowd.</h4>
+
+              </div>
+            </div>
+            <footer id="contact-footer">
+              <div id="contact-footer-copyright" class="font-subheader">© ELPUTA INC.</div>
+            </footer>
+          </div>
+        </div>
+      </div>
+      <div id="main-scrollbar">
+        <div id="main-scrollbar-indicator"></div>
+      </div>
+      <div id="menu"> <canvas id="menu-canvas"></canvas>
+        <div id="menu-content" class="flex-vertical">
+          <ul id="menu-menu" class="nav">
+            <li class="menu-menu-item is-home"><a href="/">Home</a></li>
+            <li class="menu-menu-item is-about"><a href="#about">Roadmap</a></li>
+            <li class="menu-menu-item is-work"><a href="#work">Tokenomics</a></li>
+            <li class="menu-menu-item is-contact"><a href="#contact">About</a></li>
+          </ul>
+          <div style="display: none;" id="menu-lang-selector"> <span class="menu-lang-item is-en" data-id="en">En</span>
+            <span class="menu-lang-item-separator %>">/</span> <a href="/cn" class="menu-lang-item is-cn"
+              data-id="cn">中</a> </div>
+        </div>
+      </div>
+      <header id="header" class="font-subheader cache">
+        <div id="header-content"> <a aria-label="homepage" href="/" id="header-logo">
+            <h1>PULSE TV</h1>
+          </a>
+          <div style="display: none;" id="header-lang-selector" class="header-item"> <a href="/cn"
+              class="header-lang-item is-cn" data-id="cn">中</a> </div>
+          <ul id="header-menu" class="nav">
+            <li class="header-menu-item header-item is-contact">
+              <a aria-label="contact" href="#ROADMAP">
+                <div class="header-menu-item-mask">ROADMAP</div>
+              </a>
+            </li>
+            <li class="header-menu-item header-item is-work">
+              <a aria-label="work" href="#tokenomics">
+                <div class="header-menu-item-mask">TOKENOMICS</div>
+              </a>
+            </li>
+            <li class="header-menu-item header-item is-about">
+              <a aria-label="about" href="/#about">
+                <div class="header-menu-item-mask">About</div>
+              </a>
+            </li>
+            <li class="header-menu-item header-item is-home">
+              <a aria-label="home" href="/">
+                <div class="header-menu-item-mask">Home</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div id="header-menu-btn"></div>
+      </header>
+      <div id="main-scroll-indicator">
+        <div id="main-scroll-indicator-text">Scroll to see more</div>
+        <div id="main-scroll-indicator-arrow-container"><svg xmlns="http://www.w3.org/2000/svg" width="5" height="40"
+            viewBox="0 0 5 40">
+            <title>Vector Smart Object</title>
+            <path d="M0,40V0H1V35H5Z" />
+          </svg></div>
+      </div>
+    </div>
+  </div> <a id="snd-btn" class="cache"></a>
+    <div id="preloader" class="cache" data-gesture="Click anywhere to begin"><canvas id="preloader-canvas"></canvas>
+    </div>
+    <div id="not-support" class="cache">We are sorry to inform you that your browser is not compatible with our
+      website.<br><br>Please do consider upgrading your browser.</div>
+    <div id="cursor-follow" class="font-bold"></div>
+    <script src="assets/js/TweenLite.js"></script>
+    <script src="assets/js/three.r128.dev.js"></script>
+    <script src="assets/js/index.js"></script>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+
+</html>
