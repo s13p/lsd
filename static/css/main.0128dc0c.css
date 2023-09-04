@@ -1175,7 +1175,9 @@ body {
 
 .rewards__item {
     position: relative;
-    text-align: left
+    text-align: left;
+    height: 30px;
+    width: auto;
 }
 
 .rewards__item:first-child {
